@@ -1,0 +1,48 @@
+
+  :root {
+    --base: #c84647;
+    --spacing: 10px;
+    --blur: 10px;
+    --contrast: 100%;
+  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body {
+    text-align: center;
+    padding: auto;
+}
+h1 {
+    font-size: 3em;
+    color: var(--base);
+}
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+input {
+    width: 100px;
+    margin: 10px;
+  }
+
+
+img {
+    padding: var(--spacing);
+    background: var(--base);
+    filter: blur(var(--blur)) contrast(var(--contrast));
+  }
+.img {
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+/* filter: contrast(200%); */
+/* filter: grayscale(80%); */
+/* filter: hue-rotate(90deg); */
