@@ -43,11 +43,11 @@ body {
     transition: transform .5s;
 }
 
-.panel-1 {background-image: url(./panel-1.jpeg) ;}
-.panel-2 {background-image: url(./panel-2.jpeg);}
-.panel-3 {background-image: url(./panel-3.jpeg);}
-.panel-4 {background-image: url(./panel-4.jpeg);}
-.panel-5 {background-image: url(./panel-5.jpeg);}
+.panel-1 {background-image: url(https://images.pexels.com/photos/12448506/pexels-photo-12448506.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2) ;}
+.panel-2 {background-image: url(https://images.pexels.com/photos/11667054/pexels-photo-11667054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);}
+.panel-3 {background-image: url(https://images.pexels.com/photos/11991865/pexels-photo-11991865.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2g);}
+.panel-4 {background-image: url(https://images.pexels.com/photos/12301986/pexels-photo-12301986.jpeg);}
+.panel-5 {background-image: url(https://images.pexels.com/photos/10404279/pexels-photo-10404279.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load);}
 
 
 .panel >  p:first-child {transform: translateY(-100%);}
