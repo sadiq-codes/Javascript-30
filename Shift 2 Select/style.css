@@ -1,8 +1,15 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: teal;
+}
 .inbox {
     display: flex;
     flex-direction: column;
     margin: 1em;
-    background: rgb(68, 230, 184);
+    background: rgb(206, 206, 206);
     width: 20%;
     border-radius: 10%;
 }
