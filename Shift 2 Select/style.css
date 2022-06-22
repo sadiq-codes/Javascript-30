@@ -1,0 +1,16 @@
+.inbox {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    background: rgb(68, 230, 184);
+    width: 20%;
+    border-radius: 10%;
+}
+
+.item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1em;
+   gap: 1em;
+}

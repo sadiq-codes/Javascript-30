@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hold Shift To Select All</title>
+</head>
+<body>
+<div class="inbox">
+    <div class="item">
+        <input type="checkbox" name="" id="">
+        <p class="text">I want to select you all</p>
+    </div>
+    <div class="item">
+        <input type="checkbox" name="" id="">
+        <p class="text">I want to select you all</p>
+    </div>
+    <div class="item">
+        <input type="checkbox" name="" id="">
+        <p class="text">I want to select you all</p>
+    </div>
+    <div class="item">
+        <input type="checkbox" name="" id="">
+        <p class="text">I want to select you all</p>
+    </div>
+    <div class="item">
+        <input type="checkbox" name="" id="">
+        <p class="text">I want to select you all</p>
+    </div>
+</div>
+</body>
+
+<script>
+    const items = document.querySelectorAll('.item input[type=checkbox]')
+    let lastChecked;
+    function selectMultiple(e){
+        inBetween = false
+        if (e.shiftKey && this.checked){
+            items.forEach(item => { 
+                if (item === this || item === lastChecked){
+                    inBetween = !inBetween;
+                }
+
+                if (inBetween){
+                    item.checked = true
+            
+                 }
+
+            })
+        }
+        lastChecked = this
+     }
+
+
+
+    items.forEach(item => item.addEventListener('click', selectMultiple))
+</script>
+</html>
