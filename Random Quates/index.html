@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Random Quotes</title>
+</head>
+<body>
+    <div class="card">
+        <form method="get">
+          
+          <p class="random-quote"></p>
+          </p>
+          <button class="get-quote">Get Random</button>
+        </form>
+
+    </div>
+<script>
+    const endpoint = 'https://api.adviceslip.com/advice'
+    let text = document.querySelector('.random-quote')
+
+    fetch(endpoint)
+    .then(response => response.json())
+    .then(quote => {
+        newQuote = quote['slip'].advice
+        text.innerText = `"${newQuote}"`
+        
+    }
+    )
+    
+</script>
+</body>
+</html>
