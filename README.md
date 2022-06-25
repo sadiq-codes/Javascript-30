@@ -7,3 +7,4 @@ I will be creating 30 java-script projects
 4. Image Gallery : https://image-galary-2.netlify.app/
 5. Html Canvas: https://drawing-html-canvas.netlify.app/
 6. Shipt to select: https://shift-2-select-multiple-checkboxes.netlify.app/
+7. Random quotes: https://generate-random-qoutes.netlify.app/
