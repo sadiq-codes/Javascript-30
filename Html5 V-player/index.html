@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V-Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="player">
+        <video class="player_video viewer" src="./Cs Var with js.mp4"></video>
+
+        <div class="controls">
+            <div class="progress">
+                <div class="progress__filled"></div>
+            </div>
+            <button class="play_button toggle" type="button" title="Toggle play">►</button>
+            <input class="player_range" type="range" name="volume" min="0" max="1" step="0.1" value="1">
+            <input class="player_range" type="range" name="player-track" min="0" max="1" step="0.01" value="0">
+            <button class="play_button" data-skip="-10" ><<10s</button>
+            <button class="play_button" data-skip="10" >10s>></button>
+        </div>
+    </div>
+    <script>
+        // '►' : '❚ ❚';
+   /* Get Our Elements */
+const player = document.querySelector('.player');
+const video = player.querySelector('.viewer');
+const progress = player.querySelector('.progress');
+const progressBar = player.querySelector('.progress__filled');
+const toggle = player.querySelector('.toggle');
+const skipButtons = player.querySelectorAll('[data-skip]');
+const ranges = player.querySelectorAll('.player_range');
+const  fullscreen = player.querySelector('.fullscreen');
+
+/* Build out functions */
+
+function togglePlay(e){
+    let menu = this.paused ? 'play' : 'pause';
+    video[menu]();
+    console.log(e)
+
+}
+
+function updateButton(){
+    let btn = this.paused ? '►' : '❚ ❚';
+    toggle.textContent = btn
+}
+
+function skip() {
+    let skipTo = parseFloat(this.dataset.skip)
+    video.currentTime += skipTo 
+  
+}
+
+function updateRange(){
+  video[this.name] = this.value
+}
+
+function updateProgress() {
+    const progress = (video.currentTime / video.duration) * 100
+    progressBar.style.flexBasis = `${progress}%`
+
+}
+function scrub(e) {
+  const scrubTime = (e.offsetX / progress.offsetWidth) * video.duration;
+  video.currentTime = scrubTime;
+}
+
+function makeFullScreen(e) {
+    console.log(video.style.width)  
+    // = e.screenX
+    console.log(video.style.height)
+    //  = e.screenY
+    // console.log(document.innerWidth, document.innerHeight);
+  
+}
+
+video.addEventListener('click', togglePlay)
+video.addEventListener('play', updateButton)
+video.addEventListener('pause', updateButton)
+video.addEventListener('timeupdate', updateProgress)
+
+toggle.addEventListener('click', togglePlay)
+skipButtons.forEach(button => button.addEventListener('click', skip))
+ranges.forEach(range => range.addEventListener('change', updateRange))
+ranges.forEach(range => range.addEventListener('mousemove', updateRange))
+
+let mousedown = false;
+progress.addEventListener('click', scrub);
+progress.addEventListener('mousemove', (e) => mousedown && scrub(e));
+progress.addEventListener('mousedown', () => mousedown = true);
+progress.addEventListener('mouseup', () => mousedown = false);
+
+fullscreen.addEventListener('click', makeFullScreen);
+    </script>
+</body>
+</html>
