@@ -9,3 +9,5 @@ I will be creating 30 java-script projects
 6. Shipt to select: https://shift-2-select-multiple-checkboxes.netlify.app/
 7. Random quotes: https://generate-random-qoutes.netlify.app/
 8. Ajax type Ahead: https://ajax-type-ahead-js.netlify.app/
+9. Custom Video Player:
+10. Slide In Images: 
