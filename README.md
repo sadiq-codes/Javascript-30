@@ -11,3 +11,5 @@ I will be creating 30 java-script projects
 8. Ajax type Ahead: https://ajax-type-ahead-js.netlify.app/
 9. Custom Video Player: https://custom-html-5-site.netlify.app
 10. Slide In Images: https://slide-in-images.netlify.app/
+11.Css Text Shadow:  https://move-css-shadow-on-mousemove.netlify.app/
+12.Sorted names: https://sorted-names-baseon-second-word.netlify.app/
