@@ -13,3 +13,4 @@ I will be creating 30 java-script projects
 10. Slide In Images: https://slide-in-images.netlify.app/
 11.Css Text Shadow:  https://move-css-shadow-on-mousemove.netlify.app/
 12.Sorted names: https://sorted-names-baseon-second-word.netlify.app/
+13. tally with reduce: https://tally-with-reduce.netlify.app/
