@@ -28,3 +28,5 @@ I will be creating 30 java-script projects
 13. tally with reduce: https://tally-with-reduce.netlify.app/
 
 14. speech recognition: https://speech-recognition-bbkrmuhd.netlify.app/
+
+15. Geo-location : https://geo-location-app-with-direction-and-speed.netlify.app/
