@@ -16,8 +16,8 @@
         <a href="#">About Me</a>
         <div class="dropdown dropdown1">
           <div class="bio">
-            <img src="https://logo.clearbit.com/wesbos.com">
-            <p>Wes Bos sure does love web development. He teaches things like JavaScript, CSS and BBQ. Wait. BBQ isn't part of web development. It should be though!</p>
+            <img style="height: 200px;" src="https://avatars.githubusercontent.com/u/68012668?v=4">
+            <p>Abubakar Sadiq sure does love web development. He teaches things like JavaScript, CSS and BBQ. Wait. BBQ isn't part of web development. It should be though!</p>
           </div>
         </div>
       </li>
@@ -65,10 +65,10 @@
       <li>
         <a href="#">Other Links</a>
         <ul class="dropdown dropdown3">
-          <li><a class="button" href="http://twitter.com/wesbos">Twitter</a></li>
-          <li><a class="button" href="http://facebook.com/wesbos.developer">Facebook</a></li>
-          <li><a class="button" href="http://wesbos.com">Blog</a></li>
-          <li><a class="button" href="http://wesbos.com/courses">Course Catalog</a></li>
+          <li><a class="button" href="https://twitter.com/sadiqcodes">Twitter</a></li>
+          <li><a class="button" href="https://github.com/bbkrmuhd">Github</a></li>
+          <li><a class="button" href="https://github.com/bbkrmuhd">Blog</a></li>
+          <li><a class="button" href="https://github.com/bbkrmuhd">Course Catalog</a></li>
         </ul>
       </li>
     </ul>
@@ -231,7 +231,7 @@
   setTimeout(() => {
     this.classList.add('trigger-enter-active')
   },150)
-  this.classList.add('open')
+  background.classList.add('open')
 
 
   const dropdown = this.querySelector('.dropdown')
@@ -247,11 +247,12 @@
 
   background.style.setProperty('width', `${coords.width}px`)
   background.style.setProperty('height', `${coords.height}px`)
-  background.style.setProperty('transform', `translate (${coords.left}px, ${coords.top}px)`)
+  background.style.setProperty('transform', `translate(${coords.left}px, ${coords.top}px)`)
     
   } 
   function handleLeave(){
     this.classList.remove('trigger-enter','trigger-enter-active')
+    background.classList.remove("open")
   }
 
   triggers.forEach(trigger => trigger.addEventListener('mouseenter', handleEnter))
