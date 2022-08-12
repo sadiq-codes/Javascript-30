@@ -30,3 +30,5 @@ I will be creating 30 java-script projects
 14. speech recognition: https://speech-recognition-bbkrmuhd.netlify.app/
 
 15. Geo-location : https://geo-location-app-with-direction-and-speed.netlify.app/
+
+16. Stipe Nav :  https://thunderous-lolly-2a29c0.netlify.app/
